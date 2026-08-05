@@ -1,4 +1,4 @@
-const API_BASE = "/api/auth"
+const API_BASE = `${import.meta.env.VITE_API_URL}/auth`;
 export const AUTH_TOKEN_KEY = "newgen-auth-token"
 
 export function getAuthToken(){
