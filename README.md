@@ -1,4 +1,4 @@
-# NewGen AI
+# PromptCraft
 
 A resume-ready full-stack AI chat application with PDF upload, Server-Sent Events streaming, recent chat history, and persistent conversation memory.
 
@@ -102,12 +102,5 @@ Frontend: `http://localhost:5173`
 Backend: `http://localhost:3001`
 MongoDB: `mongodb://localhost:27017/newgenai`
 
-## Resume Talking Points
-
-- Implemented SSE streaming protocol for token-level AI responses.
-- Added PDF ingestion pipeline with validation, in-memory upload handling, and parsed document context.
-- Separated controllers from services to keep business logic testable and maintainable.
-- Persisted full chat memory in MongoDB with indexed message retrieval and recent chat metadata.
-- Built a production-style UI with authentication, optimistic rendering, persistent active chat selection, and responsive layout.
 
 
