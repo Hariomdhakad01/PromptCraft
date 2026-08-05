@@ -1,4 +1,4 @@
-# NewGen AI
+# PromptCraft
 
 A resume-ready full-stack AI chat application with PDF upload, Server-Sent Events streaming, recent chat history, and persistent conversation memory.
 
