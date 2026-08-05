@@ -1,0 +1,43 @@
+import mongoose from "mongoose"
+
+const userSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+        trim: true,
+        maxlength: 80,
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+        lowercase: true,
+        trim: true,
+        index: true,
+    },
+    passwordHash: {
+        type: String,
+        required: true,
+    },
+    passwordSalt: {
+        type: String,
+        required: true,
+    },
+}, {
+    timestamps: true,
+})
+
+userSchema.set("toJSON", {
+    transform(_doc, ret) {
+        ret.id = ret._id.toString()
+        delete ret._id
+        delete ret.__v
+        delete ret.passwordHash
+        delete ret.passwordSalt
+        return ret
+    },
+})
+
+const User = mongoose.model("User", userSchema)
+
+export default User
