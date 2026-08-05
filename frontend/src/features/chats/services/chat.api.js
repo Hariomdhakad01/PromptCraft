@@ -1,4 +1,5 @@
-const API_BASE = "/api/chat"
+const API_BASE = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/chat`: "/api/chat";
+
 const AUTH_TOKEN_KEY = "newgen-auth-token"
 
 export async function listChats(){
